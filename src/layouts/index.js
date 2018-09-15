@@ -7,6 +7,12 @@ import { xenonBlue, blackenedPearl } from '../components/Utilities'
 import Header from '../components/header'
 import './index.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, fas)
+
 const Wrapper = styled.div`
   font-family: 'Fira Sans';
   color: ${blackenedPearl};
@@ -15,7 +21,7 @@ const Wrapper = styled.div`
   }
 `
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <Wrapper>
     <Helmet
       title={data.site.siteMetadata.title}
